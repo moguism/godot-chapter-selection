@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3swx1sct8qx5"]
+
+[ext_resource type="Script" path="res://ChapterSelect.cs" id="1_np28k"]
+
+[node name="ChapterSelect" type="Node2D"]
+script = ExtResource("1_np28k")
