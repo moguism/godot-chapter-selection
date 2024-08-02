@@ -2,12 +2,13 @@ using Godot;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System;
 
-public partial class ChapterSelect : Node2D
+public partial class ChapterSelect : VBoxContainer
 {
 	// Paths to the executables
 	private Dictionary<string, string> projectPaths = new Dictionary<string, string>(){
-		{"Chapter 1", "res://Chapters/Chapter1/Prueba"}
+		{"Chapter 1", "res://Chapters/Chapter1/Chapter1"}
 	};
 
 	public override void _Ready()
@@ -17,7 +18,7 @@ public partial class ChapterSelect : Node2D
 		{
 			Button button = new Button
 			{
-				Text = "Execute Project " + project.Key
+				Text = project.Key
 			};
 
 			string projectPath = project.Value;
@@ -71,7 +72,7 @@ public partial class ChapterSelect : Node2D
 			GD.Print("Process started successfully: " + process.Id); // Printing the PID of the process
 			GetTree().Quit(); // Closing the chapter select window cuz it's not needed anymore
 		}
-		catch (System.Exception error)
+		catch (Exception error)
 		{
 			GD.PrintErr("Error trying to start the process: " + error.Message); // Just in case something fails
 		}

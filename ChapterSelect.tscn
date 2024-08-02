@@ -2,5 +2,13 @@
 
 [ext_resource type="Script" path="res://ChapterSelect.cs" id="1_np28k"]
 
-[node name="ChapterSelect" type="Node2D"]
+[node name="ChapterSelect" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_np28k")
+metadata/_edit_use_anchors_ = true
